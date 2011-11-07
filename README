@@ -1,0 +1,34 @@
+# onUsefulThings plugin (for symfony 1.4) #
+
+The `onUsefulThingsPlugin` provides some fast and useful functions.
+
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install onUsefulThingsPlugin.tar.gz
+
+  * Activate the plugin in the `config/ProjectConfiguration.class.php`
+  
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfDoctrinePlugin', 
+              'onUsefulThingsPlugin',
+              '...'
+            ));
+          }
+        }
+
+## Fast Mailer ##
+
+    * Configuration
+
+        In app.yml you need to set some variables
+
+        all:
+          on_useful_things:
+            default_sender_address:      no-reply@yourdomain.com  # The mail from which every mail will be sent
